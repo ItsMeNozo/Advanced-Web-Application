@@ -1,0 +1,18 @@
+{
+  "name": "awa-api",
+  "version": "1.0.0",
+  "description": "Your app description",
+  "scripts": {
+    "client-admin": "npm start --prefix clients/admin",
+    "client-lecturer": "npm start --prefix clients/lecturer",
+    "client-student": "npm start --prefix clients/student",
+    "server-admin": "nodemon servers/admin/server.ts",
+    "server-lecturer": "nodemon servers/lecturer/server.ts",
+    "server-student": "nodemon servers/student/server.ts",
+    "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
+  },
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "concurrently": "^7.0.0"
+  }
+}
