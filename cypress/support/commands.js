@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import login from "../pages/login";
+
+/**
+ * Creates login
+ * @param {string} email - user email
+ * @param {string} password - user password
+ */
+Cypress.Commands.add("login", (email, password) => {
+  login.elements.emailInput().type(email);
+  login.elements.passwordInput().type(password);
+  login.elements.signInBtn().click();
+});
