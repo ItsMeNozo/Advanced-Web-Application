@@ -6,9 +6,9 @@
     "client-admin": "npm start --prefix clients/admin",
     "client-lecturer": "npm start --prefix clients/lecturer",
     "client-student": "npm start --prefix clients/student",
-    "server-admin": "nodemon servers/admin/server.ts",
-    "server-lecturer": "nodemon servers/lecturer/server.ts",
-    "server-student": "nodemon servers/student/server.ts",
+    "server-admin": "cd servers/admin && npm run start:dev",
+    "server-lecturer": "cd servers/lecturer && npm run start:dev",
+    "server-student": "cd servers/student && npm run start:dev",
     "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
   },
   "dependencies": {
