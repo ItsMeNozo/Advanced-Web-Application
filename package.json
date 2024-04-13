@@ -12,7 +12,10 @@
     "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
   },
   "dependencies": {
-    "nodemon": "^2.0.15",
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.3"
   }
 }
