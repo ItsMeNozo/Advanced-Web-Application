@@ -1,18 +1,24 @@
 {
-    "name": "awa-api",
-    "version": "1.0.0",
-    "description": "Your app description",
-    "scripts": {
-        "client-admin": "npm start --prefix clients/admin",
-        "client-lecturer": "npm start --prefix clients/lecturer",
-        "client-student": "npm start --prefix clients/student",
-        "server-admin": "cd servers/admin && npm run start:dev",
-        "server-lecturer": "cd servers/lecturer && npm run start:dev",
-        "server-student": "cd servers/student && npm run start:dev",
-        "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
-    },
-    "dependencies": {
-        "nodemon": "^2.0.15",
-        "concurrently": "^7.0.0"
-    }
+  "name": "awa-api",
+  "version": "1.0.0",
+  "description": "Your app description",
+  "type": "module",
+  "scripts": {
+    "client-admin": "npm start --prefix clients/admin",
+    "client-lecturer": "npm start --prefix clients/lecturer",
+    "client-student": "npm start --prefix clients/student",
+    "server-admin": "cd servers/admin && npm run start:dev",
+    "server-lecturer": "cd servers/lecturer && npm run start:dev",
+    "server-student": "cd servers/student && npm run start:dev",
+    "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "express": "^4.19.2",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.3",
+    "typescript": "^5.4.5"
+  }
 }

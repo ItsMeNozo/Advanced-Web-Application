@@ -1,0 +1,19 @@
+import mongoose from "mongoose";
+import app from "../../servers/lecturer/common/app.ts";
+
+context("Join a class", () => {
+  var server;
+
+  context("Copy invite code", () => {
+    beforeAll(async () => {
+      server = app.run();
+    });
+
+    afterAll(async () => {
+      await mongoose.disconnect();
+      await mongoose.connection.close();
+    });
+  });
+
+  context("Join a class", () => {});
+});
