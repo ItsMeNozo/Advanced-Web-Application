@@ -7,19 +7,19 @@ class Sidebar {
   };
 
   clickHomeScreenLink() {
-    this.elements.homeScreenLnk().click();
+    this.elements.lnk_homeScreen().click();
   }
 
   clickClassesLink() {
-    this.elements.classesLnk().click();
+    this.elements.lnk_classes().click();
   }
 
   clickCalendarLink() {
-    this.elements.calendarLnk().click();
+    this.elements.lnk_calendar().click();
   }
 
   clickSettingsLink() {
-    this.elements.settingsLnk().click();
+    this.elements.lnk_settings().click();
   }
 }
 
