@@ -1,7 +1,7 @@
 class JoinClassModal {
   elements = {
     inviteCodeInput: () => cy.get("input#code"),
-    joinBtn: () => cy.get("button").contains("Join"),
+    btn_join: () => cy.get("button").contains("Join"),
   };
 
   typeInviteCode(inviteCode) {
@@ -9,7 +9,7 @@ class JoinClassModal {
   }
 
   clickJoinBtn() {
-    this.elements.joinBtn().click();
+    this.elements.btn_join().click();
   }
 }
 

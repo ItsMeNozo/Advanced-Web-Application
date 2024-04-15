@@ -1,7 +1,7 @@
 class HomePage {
   elementsNoClasses = {
-    getStartedBtn: () => cy.get("button").contains("Get Started"),
-    joinAClassDiv: () => cy.get("div").contains("Join a class"),
+    btn_getStarted: () => cy.get("button").contains("Get Started"),
+    div_joinAClass: () => cy.get("div").contains("Join a class"),
   };
 
   elements = {
@@ -9,11 +9,11 @@ class HomePage {
   };
 
   clickGetStartedBtn() {
-    this.elementsNoClasses.getStartedBtn().click();
+    this.elementsNoClasses.btn_getStarted().click();
   }
 
   clickJoinAClassDiv() {
-    this.elementsNoClasses.joinAClassDiv().click();
+    this.elementsNoClasses.div_joinAClass().click();
   }
 }
 

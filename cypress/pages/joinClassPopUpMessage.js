@@ -1,10 +1,10 @@
 class JoinClassPopUpMessage {
   elements = {
-    popUpJoinClassSuccess: () => cy.contains("div", "Joined class successfully"),
+    popUp_joinClassSuccess: () => cy.contains("div", "Joined class successfully"),
   };
 
   checkJoinClassSuccess() {
-    this.elements.popUpJoinClassSuccess().should("be.visible");
+    this.elements.popUp_joinClassSuccess().should("be.visible");
   }
 }
 
