@@ -12,14 +12,17 @@ class Sidebar {
 
   clickClassesLink() {
     this.elements.lnk_classes().click();
+    return this;
   }
 
   clickCalendarLink() {
     this.elements.lnk_calendar().click();
+    return this;
   }
 
   clickSettingsLink() {
     this.elements.lnk_settings().click();
+    return this;
   }
 }
 

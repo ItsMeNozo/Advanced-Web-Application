@@ -10,10 +10,12 @@ class HomePage {
 
   clickGetStartedBtn() {
     this.elementsNoClasses.btn_getStarted().click();
+    return this;
   }
 
   clickJoinAClassDiv() {
     this.elementsNoClasses.div_joinAClass().click();
+    return this;
   }
 }
 

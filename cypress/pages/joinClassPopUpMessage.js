@@ -5,6 +5,7 @@ class JoinClassPopUpMessage {
 
   checkJoinClassSuccess() {
     this.elements.popUp_joinClassSuccess().should("be.visible");
+    return this;
   }
 }
 

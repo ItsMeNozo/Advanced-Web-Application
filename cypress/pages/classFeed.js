@@ -2,8 +2,8 @@ class HomepageNoClasses {
   studentIDPopUp = {
     container: () => cy.get("div.ant-modal-content"),
     textInput: () => cy.get("input#studentID"),
-    laterBtn: () => cy.contains("button", "Later"),
-    updateBtn: () => cy.contains("button", "Update"),
+    btn_later: () => cy.contains("button", "Later"),
+    btn_update: () => cy.contains("button", "Update"),
   };
 }
 

@@ -5,6 +5,7 @@ class Classes {
 
   clickPlusBtn() {
     this.elementsNoClasses.btn_plus().click();
+    return this;
   }
 }
 

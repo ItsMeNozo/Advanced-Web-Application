@@ -6,10 +6,12 @@ class JoinClassModal {
 
   typeInviteCode(inviteCode) {
     this.elements.inviteCodeInput().type(inviteCode);
+    return this;
   }
 
   clickJoinBtn() {
     this.elements.btn_join().click();
+    return this;
   }
 }
 
