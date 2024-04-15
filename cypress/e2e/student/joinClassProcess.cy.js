@@ -6,13 +6,13 @@ import joinClassPopUpMessage from "../../pages/joinClassPopUpMessage";
 context("Student join a class", () => {
   context("Using account having joined no classes", () => {
     beforeEach(() => {
-      cy.visit("http://localhost:3000/auth/login");
+      cy.visit(`${Cypress.config("studentClientBaseUrl")}/${Cypress.env("login_url")}`);
 
       cy.fixture("student/student-no-classes.json").then((data) => {
         cy.login(data.username, data.password);
       });
 
-      cy.url().should("include", "/home");
+      cy.url().should("include", Cypress.env("home_url"));
     });
     it("Join class using valid invite code from home page", function () {
       cy.fixture("student/successful-join-with-code-response1.json").then((response) => {
@@ -60,7 +60,7 @@ context("Student join a class", () => {
         joinClassModal.clickJoinBtn();
 
         joinClassPopUpMessage.checkJoinClassSuccess();
-        cy.url().should("include", `/classes/feeds/${this.slug}`);
+        cy.url().should("include", `${Cypress.env("class_feed_url")}${this.slug}`);
 
         // classFeed.studentIDPopUp.container().should("be.visible");
       });
