@@ -9,11 +9,11 @@ class HomePage {
   };
 
   clickGetStartedBtn() {
-    this.getStartedBtn().click();
+    this.elementsNoClasses.getStartedBtn().click();
   }
 
   clickJoinAClassDiv() {
-    this.joinAClassDiv().click();
+    this.elementsNoClasses.joinAClassDiv().click();
   }
 }
 

@@ -4,7 +4,7 @@ class JoinClassPopUpMessage {
   };
 
   checkJoinClassSuccess() {
-    this.popUpJoinClassSuccess.should("be.visible");
+    this.elements.popUpJoinClassSuccess().should("be.visible");
   }
 }
 

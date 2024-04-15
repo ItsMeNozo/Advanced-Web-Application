@@ -1,4 +1,4 @@
-import classFeed from "../../pages/classFeed";
+// import classFeed from "../../../temp/classFeed";
 import homepage from "../../pages/homepage";
 import joinClassModal from "../../pages/joinClassModal";
 import joinClassPopUpMessage from "../../pages/joinClassPopUpMessage";
@@ -54,14 +54,13 @@ context("Student join a class", () => {
         });
 
         homepage.clickGetStartedBtn();
-        // homepage.clickJoinAClassDiv();
+        homepage.clickJoinAClassDiv();
 
-        // joinClassModal.typeInviteCode(this.inviteCode);
-        // joinClassModal.clickJoinBtn();
+        joinClassModal.typeInviteCode(this.inviteCode);
+        joinClassModal.clickJoinBtn();
 
-        // joinClassPopUpMessage.checkJoinClassSuccess();
-        // // homepage.elements.popUpJoinClassSuccess.should("be.visible");
-        // cy.url().should("include", `/classes/feeds/${this.slug}`);
+        joinClassPopUpMessage.checkJoinClassSuccess();
+        cy.url().should("include", `/classes/feeds/${this.slug}`);
 
         // classFeed.studentIDPopUp.container().should("be.visible");
       });
