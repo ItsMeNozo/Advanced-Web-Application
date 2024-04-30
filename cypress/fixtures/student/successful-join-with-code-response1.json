@@ -1,0 +1,214 @@
+{
+  "status": "success",
+  "message": "Join class successfully",
+  "data": {
+    "_id": "6592bb8775a226de40f490e0",
+    "cid": "AWA-50",
+    "name": "UI/UX Design",
+    "banner": "https://www.gstatic.com/classroom/themes/Honors.jpg",
+    "createAt": "2024-01-01T13:14:36.632Z",
+    "students": [
+      {
+        "_id": "65508b509ed10e214b3c0c74",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLwwZ19Z6mjmqg1d8DGknJ25YXjlM3Joyn9nVe4AWeH1Fo=s96-c",
+        "phoneNumber": "0917337378",
+        "username": "Nguyễn Khoa",
+        "googleID": "116110045275404248753",
+        "firstname": "Nguyễn",
+        "lastname": "Khoa",
+        "role": "student",
+        "email": "nguyenthoaidangkhoa@gmail.com",
+        "active": true,
+        "verify": false,
+        "__v": 0
+      },
+      {
+        "_id": "6619e85d2418bc817646e230",
+        "avatar": "https://lh3.googleusercontent.com/a/default-user=s120-p",
+        "username": "Starlight",
+        "role": "student",
+        "email": "officialnozogaming@gmail.com",
+        "active": true,
+        "verify": true,
+        "__v": 0
+      },
+      {
+        "_id": "65606b65f3579d3314480dcf",
+        "phoneNumber": "0923337378",
+        "username": "ntdkhoa10",
+        "firstname": "Khoa",
+        "lastname": "Nguyễn",
+        "role": "student",
+        "email": "nguyenthoaidangkhoa@gmail.com",
+        "active": true,
+        "verify": true,
+        "__v": 0,
+        "avatar": "https://res.cloudinary.com/daa7j5ohx/image/upload/v1713020654/avatars/witjv7zio2hnfcytkltq.jpg"
+      },
+      {
+        "_id": "656f6ece5bed5caee0cb1446",
+        "avatar": "https://lh3.googleusercontent.com/a/default-user=s120-p",
+        "phoneNumber": "0953337378",
+        "username": "testacc",
+        "firstname": "Tam",
+        "lastname": "Nguyen",
+        "role": "student",
+        "email": "t3pmal@gmail.com",
+        "active": true,
+        "verify": true,
+        "__v": 0
+      }
+    ],
+    "lecturers": [],
+    "owner": {
+      "_id": "655b11e280ed254c303d34b7",
+      "avatar": "https://res.cloudinary.com/daa7j5ohx/image/upload/v1700637669/avatars/brqhuwsg20ehrswaxawh.png",
+      "phoneNumber": "0910337378",
+      "username": "20127050",
+      "firstname": "Minh",
+      "lastname": "Nguyễn Đức",
+      "role": "lecturer",
+      "email": "nducminh.it@gmail.com",
+      "active": true,
+      "verify": true,
+      "__v": 0
+    },
+    "inviteCode": "GUPMILW",
+    "slug": "KcsSstjjNVemZov",
+    "active": true,
+    "studentPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "lecturerPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "ownerPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "gradeColumns": [
+      {
+        "name": "HW1",
+        "scale": 50,
+        "order": 0,
+        "published": false,
+        "_id": "661b59e04681481f551b194c"
+      },
+      {
+        "name": "HW2",
+        "scale": 50,
+        "order": 1,
+        "published": true,
+        "_id": "661b59e04681481f551b194d"
+      }
+    ],
+    "studentListUrl": "https://res.cloudinary.com/daa7j5ohx/raw/upload/v1704116154/studentlist/oargxpemvdwszkrrorji",
+    "studentList": [
+      {
+        "student_id": "20127043",
+        "full_name": "Khoa Nguyen",
+        "email": "nguyenthoaidangkhoa@gmail.com",
+        "_id": "661a99eaf53e39f973b568b2"
+      },
+      {
+        "student_id": "20127050",
+        "full_name": "Duc Minh",
+        "email": "ndminh@gmail.com",
+        "_id": "661a99eaf53e39f973b568b3"
+      },
+      {
+        "student_id": "20127525",
+        "full_name": "Dinh Nguyen Duy Khang",
+        "email": "khangdinh@gmail.com",
+        "_id": "661a99eaf53e39f973b568b4"
+      },
+      {
+        "student_id": "20120576",
+        "full_name": "Dang Khoa",
+        "email": "ntdkhoa@gmail.com",
+        "_id": "661a99eaf53e39f973b568b5"
+      }
+    ],
+    "gradeList": [
+      {
+        "student_id": "20120576",
+        "grade_name": ["HW1", "HW2"],
+        "grade": [
+          {
+            "col": "HW1",
+            "value": 10,
+            "_id": "661a99f7f53e39f973b568e1"
+          },
+          {
+            "col": "HW2",
+            "value": 10,
+            "_id": "661a99f7f53e39f973b568e2"
+          }
+        ],
+        "_id": "661a99f7f53e39f973b568e0"
+      },
+      {
+        "student_id": "20127043",
+        "grade_name": ["HW1", "HW2"],
+        "grade": [
+          {
+            "col": "HW1",
+            "value": 10,
+            "_id": "661a99f7f53e39f973b568e4"
+          },
+          {
+            "col": "HW2",
+            "value": 9,
+            "_id": "661a99f7f53e39f973b568e5"
+          }
+        ],
+        "_id": "661a99f7f53e39f973b568e3"
+      },
+      {
+        "student_id": "20127050",
+        "grade_name": ["HW1", "HW2"],
+        "grade": [
+          {
+            "col": "HW1",
+            "value": 8,
+            "_id": "661a99f7f53e39f973b568e7"
+          },
+          {
+            "col": "HW2",
+            "value": 8,
+            "_id": "661a99f7f53e39f973b568e8"
+          }
+        ],
+        "_id": "661a99f7f53e39f973b568e6"
+      },
+      {
+        "student_id": "20127525",
+        "grade_name": ["HW1", "HW2"],
+        "grade": [
+          {
+            "col": "HW1",
+            "value": 7,
+            "_id": "661a99f7f53e39f973b568ea"
+          },
+          {
+            "col": "HW2",
+            "value": 7,
+            "_id": "661a99f7f53e39f973b568eb"
+          }
+        ],
+        "_id": "661a99f7f53e39f973b568e9"
+      }
+    ],
+    "gradeListUrl": "https://res.cloudinary.com/daa7j5ohx/raw/upload/v1704116540/gradelist/icxcmdlt2qbcyktyx0rl",
+    "__v": 14,
+    "studentID": ""
+  }
+}

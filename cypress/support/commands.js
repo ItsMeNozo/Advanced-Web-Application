@@ -32,7 +32,7 @@ import login from "../pages/login";
  * @param {string} password - user password
  */
 Cypress.Commands.add("login", (email, password) => {
-  login.elements.emailInput().type(email);
-  login.elements.passwordInput().type(password);
-  login.elements.signInBtn().click();
+  login.elements.input_email().type(email);
+  login.elements.input_password().type(password);
+  login.elements.btn_signIn().click();
 });
