@@ -1,8 +1,8 @@
 class Login {
   elements = {
-    emailInput: () => cy.get("input#basic_username"),
-    passwordInput: () => cy.get("input#basic_password"),
-    signInBtn: () => cy.get('button[type="submit"]').filter(":contains('Log in to your account')"),
+    input_email: () => cy.get("input#basic_username"),
+    input_password: () => cy.get("input#basic_password"),
+    btn_signIn: () => cy.get('button[type="submit"]').filter(":contains('Log in to your account')"),
   };
 }
 

@@ -10,7 +10,8 @@
     "server-admin": "cd servers/admin && npm run start:dev",
     "server-lecturer": "cd servers/lecturer && npm run start:dev",
     "server-student": "cd servers/student && npm run start:dev",
-    "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\""
+    "start": "concurrently \"npm:client-admin\" \"npm:client-lecturer\" \"npm:client-student\" \"npm:server-admin\" \"npm:server-lecturer\" \"npm:server-student\"",
+    "cypress": "npx cypress open"
   },
   "dependencies": {
     "concurrently": "^7.0.0",
