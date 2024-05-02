@@ -2,11 +2,11 @@
   "status": "success",
   "message": "Get class successfully",
   "data": {
-    "_id": "6592bb8775a226de40f490e0",
-    "cid": "AWA-50",
-    "name": "UI/UX Design",
+    "_id": "6593ec2ad4b5fe3ea3615d92",
+    "cid": "20CNTThuc",
+    "name": "Blockchain",
     "banner": "https://www.gstatic.com/classroom/themes/Honors.jpg",
-    "createAt": "2024-01-01T13:14:36.632Z",
+    "createAt": "2024-01-02T09:35:44.942+00:00",
     "students": [
       {
         "_id": "65508b509ed10e214b3c0c74",
@@ -23,7 +23,16 @@
         "__v": 0,
         "studentID": "20127043"
       },
-
+      {
+        "_id": "6619e85d2418bc817646e230",
+        "avatar": "https://lh3.googleusercontent.com/a/default-user=s120-p",
+        "username": "Starlight",
+        "role": "student",
+        "email": "officialnozogaming@gmail.com",
+        "active": true,
+        "verify": true,
+        "__v": 0
+      },
       {
         "_id": "65606b65f3579d3314480dcf",
         "phoneNumber": "0923337378",
@@ -37,34 +46,21 @@
         "__v": 0,
         "avatar": "https://res.cloudinary.com/daa7j5ohx/image/upload/v1713020654/avatars/witjv7zio2hnfcytkltq.jpg",
         "studentID": "20120576"
-      },
-      {
-        "_id": "656f6ece5bed5caee0cb1446",
-        "avatar": "https://lh3.googleusercontent.com/a/default-user=s120-p",
-        "phoneNumber": "0953337378",
-        "username": "testacc",
-        "firstname": "Tam",
-        "lastname": "Nguyen",
-        "role": "student",
-        "email": "t3pmal@gmail.com",
-        "active": true,
-        "verify": true,
-        "__v": 0
       }
     ],
     "lecturers": [],
     "owner": {
-      "_id": "655b11e280ed254c303d34b7",
-      "avatar": "https://res.cloudinary.com/daa7j5ohx/image/upload/v1700637669/avatars/brqhuwsg20ehrswaxawh.png",
-      "phoneNumber": "0910337378",
-      "username": "20127050",
-      "firstname": "Minh",
-      "lastname": "Nguyễn Đức",
+      "_id": "656f56c6b64ebbe2bee32e16",
+      "avatar": "https://lh3.googleusercontent.com/a/default-user=s120-p",
+      "phoneNumber": "0912337378",
+      "username": "khangdinh02",
+      "firstname": "Khang",
+      "lastname": "Nguyễn",
       "role": "lecturer",
-      "email": "nducminh.it@gmail.com"
+      "email": "ducminh68kg.mn@gmail.com"
     },
-    "inviteCode": "GUPMILW",
-    "slug": "KcsSstjjNVemZov",
+    "inviteCode": "CUBTBTL",
+    "slug": "UaDTdhIdrtJZvbE",
     "studentPermission": {
       "annoucement": "class_permission_write",
       "assignment": "class_permission_write",

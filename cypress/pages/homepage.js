@@ -6,6 +6,8 @@ class HomePage {
 
   elements = {
     popUpJoinClassSuccess: () => cy.contains("div", "Joined class successfully"),
+    btn_3dots: () => cy.get("button svg.svg-inline--fa.fa-ellipsis.fa-lg"),
+    ul_joinAClass: () => cy.contains("ul", "Join a class"),
   };
 
   clickGetStartedBtn() {
@@ -15,6 +17,16 @@ class HomePage {
 
   clickJoinAClassDiv() {
     this.elementsNoClasses.div_joinAClass().click();
+    return this;
+  }
+
+  click3Dots() {
+    this.elements.btn_3dots().click();
+    return this;
+  }
+
+  clickJoinAClassUl() {
+    this.elements.ul_joinAClass().click();
     return this;
   }
 }
