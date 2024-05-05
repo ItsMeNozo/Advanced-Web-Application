@@ -3,7 +3,7 @@ class JoinClassModal {
     inviteCodeInput: () => cy.get("input#code"),
     btn_join: () => cy.get("button").contains("Join"),
     btn_cancel: () => cy.get("button").contains("Cancel"),
-    container: () => cy.get("div.ant-modal-content"),
+    container: () => cy.contains("div.ant-modal-content", "Join class"),
     errorMessageRejoiningClass: () => cy.get("div").contains("Joined class failed!"),
     errorMessageInvalidCode: () => cy.get("div.ant-form-item-explain-error"),
   };

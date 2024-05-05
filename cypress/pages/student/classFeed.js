@@ -1,4 +1,4 @@
-class HomepageNoClasses {
+class ClassFeed {
   studentIDPopUp = {
     container: () => cy.get("div.ant-modal-content"),
     textInput: () => cy.get("input#studentID"),
@@ -7,4 +7,4 @@ class HomepageNoClasses {
   };
 }
 
-export default new HomepageNoClasses();
+export default new ClassFeed();
