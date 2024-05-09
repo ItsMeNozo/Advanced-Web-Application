@@ -11,7 +11,7 @@ const config = {
     env: {
       login_url: "auth/login",
       home_url: "/home",
-      class_feed_url: "/classes/feeds/",
+      class_feed_url: "/classes/feeds",
       classes_url: "/classes",
     },
   },
