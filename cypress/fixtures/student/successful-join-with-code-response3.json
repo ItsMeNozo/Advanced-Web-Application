@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "message": "Join class successfully",
+  "data": {
+    "_id": "6566fc7dbd86eac22a75002d",
+    "cid": "AWA-55",
+    "name": "web development",
+    "banner": "https://www.gstatic.com/classroom/themes/Honors.jpg",
+    "createAt": "2024-05-03T07:50:27.902Z",
+    "students": [],
+    "lecturers": [],
+    "owner": {
+      "_id": "655b11e280ed254c303d34b7",
+      "avatar": "https://res.cloudinary.com/daa7j5ohx/image/upload/v1700637669/avatars/brqhuwsg20ehrswaxawh.png",
+      "phoneNumber": "0910337378",
+      "username": "20127050",
+      "firstname": "Minh",
+      "lastname": "Nguyễn Đức",
+      "role": "lecturer",
+      "password": "$2a$12$6vI7LFns.q8Rny/GCDTfCejv581b8Os4zVQhedmFYpCv7j5Nq4JV6",
+      "email": "nducminh.it@gmail.com",
+      "active": true,
+      "verify": true,
+      "__v": 0
+    },
+    "inviteCode": "ABABABA",
+    "slug": "KyMkGOQwsFMwQEa",
+    "active": true,
+    "studentPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "lecturerPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "ownerPermission": {
+      "annoucement": "class_permission_write",
+      "assignment": "class_permission_write",
+      "review": "class_permission_write",
+      "comment": "class_permission_write"
+    },
+    "gradeColumns": [],
+    "studentList": [],
+    "gradeList": [],
+    "__v": 0,
+    "student_info": [],
+    "student_grade_info": []
+  }
+}
