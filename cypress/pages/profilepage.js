@@ -8,6 +8,15 @@ class ProfilePage {
             cy.get('button[type="submit"]').filter(":contains('Update')"),
         btn_cancel: () =>
             cy.get('button[type="button"]').filter(":contains('Cancel')"),
+        input_upload_avatar: () => cy.get('#user-profile input[type="file"]'),
+        btn_avatar_ok: () =>
+            cy
+                .get('.ant-modal-footer button[type="button"]')
+                .filter(":contains('OK')"),
+        btn_avatar_cancel: () =>
+            cy
+                .get('.ant-modal-footer button[type="button"]')
+                .filter(":contains('Cancel')"),
     };
 
     editLastName(lastName) {
@@ -57,6 +66,22 @@ class ProfilePage {
 
     clickCancelBtn() {
         this.elements.btn_cancel().click();
+        return this;
+    }
+
+    uploadAvatar(fileName) {
+        this.elements
+            .input_upload_avatar()
+            .selectFile(fileName, { force: true });
+    }
+
+    clickAvatarOKBtn() {
+        this.elements.btn_avatar_ok().click();
+        return this;
+    }
+
+    clickAvatarCancelBtn() {
+        this.elements.btn_avatar_cancel().click();
         return this;
     }
 }
