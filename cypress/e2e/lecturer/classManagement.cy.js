@@ -71,6 +71,11 @@ context("Lecturer manages class", function () {
             self.inviteCode = data.data.inviteCode;
             self.slug = data.data.slug;
           });
+
+          cy.fixture("lecturer/create-class-input").then((data) => {
+            self.classID = data.ID;
+            self.className = data.name;
+          });
         });
 
         it("should let lecturer create class with valid class ID and class name", function () {
@@ -79,21 +84,14 @@ context("Lecturer manages class", function () {
           cy.fixture("lecturer/lecturer-account.json").then((data) => {
             cy.login(data.username, data.password);
           });
-          homepage.click3Dots();
-          homepage.clickCreateAClassDiv();
-          createClassModal.checkContainerVisible();
-          cy.fixture("lecturer/valid-class-info").then((data) => {
-            createClassModal.typeClassID(data.ID).typeClassName(data.name).clickCreateBtn();
-            createClassPopUpMessage.checkCreateClassSuccess();
-            cy.url().should("include", "classes/feeds");
+          cy.createClass(self.classID, self.className);
 
-            // student
-            classFeed.clickCopyBtn();
+          // instructor copy invite code
+          classFeed.clickCopyBtn();
 
-            cy.window().then((win) => {
-              win.navigator.clipboard.readText().then((text) => {
-                expect(text).to.eq(self.inviteCode);
-              });
+          cy.window().then((win) => {
+            win.navigator.clipboard.readText().then((text) => {
+              expect(text).to.eq(self.inviteCode);
             });
           });
         });
@@ -123,10 +121,10 @@ context("Lecturer manages class", function () {
         homepage.clickGetStartedBtn().clickCreateAClassDiv();
 
         createClassModal.checkContainerVisible();
-        cy.fixture("lecturer/valid-class-info").then((data) => {
+        cy.fixture("lecturer/create-class-input").then((data) => {
           createClassModal.typeClassID(data.ID).typeClassName(data.name).clickCreateBtn();
           createClassPopUpMessage.checkCreateClassSuccess();
-          cy.url().should("include", "classes/feeds");
+          cy.url().should("include", `${Cypress.env("class_feed_url")}`);
 
           sidebar.clickClassesLink();
           classes.checkNoClassesTextNotExist();
@@ -154,7 +152,7 @@ context("Lecturer manages class", function () {
     it("should show error if creating class with duplicate class ID ", function () {
       homepage.click3Dots();
       homepage.clickCreateAClassDiv();
-      cy.fixture("lecturer/valid-class-info").then((data) => {
+      cy.fixture("lecturer/create-class-input").then((data) => {
         this.name = data.name;
         cy.fixture("lecturer/duplicate-class-ID").then((data) => {
           createClassModal.typeClassID(data.ID).typeClassName(this.name).clickCreateBtn();
@@ -166,7 +164,7 @@ context("Lecturer manages class", function () {
     it("should show error if creating class with empty class ID", function () {
       homepage.click3Dots();
       homepage.clickCreateAClassDiv();
-      cy.fixture("lecturer/valid-class-info").then((data) => {
+      cy.fixture("lecturer/create-class-input").then((data) => {
         createClassModal.typeClassName(data.name).clickCreateBtn();
         createClassModal.checkErrorMessageVisible();
       });
@@ -175,12 +173,31 @@ context("Lecturer manages class", function () {
     it("should show error if creating class with empty class name", function () {
       homepage.click3Dots();
       homepage.clickCreateAClassDiv();
-      cy.fixture("lecturer/valid-class-info").then((data) => {
+      cy.fixture("lecturer/create-class-input").then((data) => {
         createClassModal.typeClassID(data.ID).clickCreateBtn();
         createClassModal.checkErrorMessageVisible();
       });
     });
   });
 
-  context("Lecturer deletes a class", function () {});
+  context("Lecturer deletes a class", function () {
+    beforeEach(() => {
+      cy.visit(`${Cypress.config("lecturerClientBaseUrl")}/${Cypress.env("login_url")}`);
+
+      cy.fixture("lecturer/lecturer-account.json").then((data) => {
+        cy.login(data.username, data.password);
+      });
+    });
+
+    it.only("should delete an existing class", function () {
+      cy.fixture("lecturer/create-class-input2").then((input) => {
+        cy.createClass(input.ID, input.name).then(() => {
+          cy.wait(1000);
+          classFeed.clickDeleteBtn();
+          classFeed.checkConfirmDeleteDialogVisible().clickYesConfirmDelete();
+          cy.url().should("eq", `${Cypress.config("lecturerClientBaseUrl")}/${Cypress.env("classes_url")}`);
+        });
+      });
+    });
+  });
 });

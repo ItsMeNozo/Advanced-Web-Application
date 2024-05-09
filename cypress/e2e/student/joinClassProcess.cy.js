@@ -44,7 +44,7 @@ export const joinClass = function (pageToJoinFrom, inviteCode, classSlug) {
   joinClassModal.clickJoinBtn();
 
   joinClassPopUpMessage.checkJoinClassSuccess();
-  cy.url().should("include", `${Cypress.env("class_feed_url")}${classSlug}`);
+  cy.url().should("include", `${Cypress.env("class_feed_url")}/${classSlug}`);
 };
 context("Student join a class", function () {
   let interceptData; // created this so the inner function can access
@@ -126,7 +126,7 @@ context("Student join a class", function () {
         joinClassModal.clickJoinBtn();
 
         joinClassPopUpMessage.checkJoinClassSuccess();
-        cy.url().should("include", `${Cypress.env("class_feed_url")}${interceptData.slug}`);
+        cy.url().should("include", `${Cypress.env("class_feed_url")}/${interceptData.slug}`);
         classFeed.studentIDPopUp.container().should("be.visible");
       });
     });

@@ -24,10 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import homepage from "../pages/student/homepage";
+import studentHomepage from "../pages/student/homepage";
+import lecturerHomepage from "../pages/lecturer/homepage";
 import login from "../pages/login";
 import joinClassModal from "../pages/student/joinClassModal";
 import joinClassPopUpMessage from "../pages/student/joinClassPopUpMessage";
+import createClassModal from "../pages/lecturer/createClassModal";
+import createClassPopUpMessage from "../pages/lecturer/createClassPopUpMessage";
 
 /**
  * Creates login
@@ -67,7 +70,7 @@ Cypress.Commands.add("interceptJoinClass", (joinResponse, classDetailsResponse, 
 
 Cypress.Commands.add("joinClass", (pageToJoinFrom, inviteCode, classSlug) => {
   if (pageToJoinFrom === "homepage") {
-    homepage.clickGetStartedBtn().clickJoinAClassDiv();
+    studentHomepage.clickGetStartedBtn().clickJoinAClassDiv();
   } else if (pageToJoinFrom === "classes") {
     sidebar.clickClassesLink();
     classes.clickPlusBtn();
@@ -78,5 +81,14 @@ Cypress.Commands.add("joinClass", (pageToJoinFrom, inviteCode, classSlug) => {
   joinClassModal.clickJoinBtn();
 
   joinClassPopUpMessage.checkJoinClassSuccess();
-  cy.url().should("include", `${Cypress.env("class_feed_url")}${classSlug}`);
+  cy.url().should("include", `${Cypress.env("class_feed_url")}/${classSlug}`);
+});
+
+Cypress.Commands.add("createClass", (classID, className) => {
+  lecturerHomepage.click3Dots();
+  lecturerHomepage.clickCreateAClassDiv();
+  createClassModal.checkContainerVisible();
+  createClassModal.typeClassID(classID).typeClassName(className).clickCreateBtn();
+  createClassPopUpMessage.checkCreateClassSuccess();
+  cy.url().should("include", `${Cypress.env("class_feed_url")}`);
 });
